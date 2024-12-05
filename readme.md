@@ -2,12 +2,6 @@
 This repository contains code for various reinforcement learning algorithms such as DQN, Double DQN and DDPG. Click on each of their sub-folders to find out specific information on how they each work. See below for an overview on the project results.
 
 
-![DQN, DDQN](/imgs/results.png "Discrete Action Space RL Approaches")
-
-
-*One dense layer more and more _"lenient episode termination"_ (meaning the car can drive on the grass for longer before terminating episode)
-
-
 # Building Conda Env on Local Machine
 A yml script has been created to help with building your anaconda environment. Simply run the command below in terminal (which supports anaconda). Environment name can be changed from SERVER_ENV to user choice inside yml file.
 ```shell
