@@ -1,24 +1,6 @@
 # Overview
 This repository contains code for various reinforcement learning algorithms such as DQN, Double DQN and DDPG. Click on each of their sub-folders to find out specific information on how they each work. See below for an overview on the project results.
 
-## Click Image Below For YouTube Video!
-[![Watch the video](imgs/still.png)](https://www.youtube.com/watch?v=eQtx2ZZtuTw)
-
-
-# Testing Results
-| Method                                                                                            | Average Reward (across 50 runs) | Max  | Min  | Standard Deviation |
-|---------------------------------------------------------------------------------------------------|---------------------------------|------|------|--------------------|
-| Random Agent                                                                                      |             -24.28              | -2.49|-30.09|        7.13        | 
-| Human                                                                                             |             770.75              |824.09|683.29|       45.28        | 
-| Proportional, Integral, Derivative (PID) Control                                                  |             680.98              |805.45|446.62|       90.22        | 
-| DQN with Experience Replay and Fixed Target Network                                               |             385.06              |841.28| 43.28|       251.37       | 
-| Prioritised Double DQN with Experience Replay, Fixed Target Network and Reward Clipping           |             730.88              |870.65|101.22|       216.13       | 
-| Prioritised Double DQN with Experience Replay, Fixed Target Network and Reward Clipping*          |             899.49              |919.69|817.27|        98.25       |
-| DDPG                                                                                              |             253.12              |507.64| 78.65|       231.93       | 
-| DDPG Reward Clipping                                                                              |             620.60              |835.48|187.61|       197.00       | 
-
-*An extra dense layer to the neural network and modified episode termination approach.
-
 
 ![DQN, DDQN](/imgs/results.png "Discrete Action Space RL Approaches")
 
