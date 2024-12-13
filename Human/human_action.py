@@ -33,7 +33,7 @@ def key_release(k, mod):
 def run_carRacing_asHuman():
     global bool_do_not_quit, a
 
-    num_runs = 12  # Number of rounds to play
+    num_runs = 10  # Number of rounds to play
     rewards = []
 
     # Initialize the environment

@@ -85,11 +85,14 @@ def test_agent( name : str, AgentClass, togray,  env : gym.make, model : list, t
 if __name__ == "__main__":
     # Import agents
 
-    from DDQN2 import DDQN_Agent as DDQN_Agent2
-    from DDQN2 import convert_greyscale as DDQN2_convert_greyscale
+    # from DDQN2 import DDQN_Agent as DDQN_Agent2
+    # from DDQN2 import convert_greyscale as DDQN2_convert_greyscale
+    from DDQN2_action import DDQN_Agent as DDQN_Agent2
+    from DDQN2_action import convert_greyscale as DDQN2_convert_greyscale
 
 
-    agents_functs_folders = [ ["DDQN2", DDQN_Agent2, DDQN2_convert_greyscale, "model/dylanqi/DDQN2/20241129-123456"], # 3 for color mod
+    agents_functs_folders = [ ["DDQN2", DDQN_Agent2, DDQN2_convert_greyscale, "model/dylanqi/DDQN2/20241205-010828"], # two for no mod
+                            # ["DDQN2", DDQN_Agent2, DDQN2_convert_greyscale, "model/dylanqi/DDQN2/20241129-123456"], # 3 for color mod
                             #  ["DDQN2", DDQN_Agent2, DDQN2_convert_greyscale, "model/dylanqi/DDQN2/20241128-122649"], # all for color mod
                             #  ["DDQN2", DDQN_Agent2, DDQN2_convert_greyscale, "model/dylanqi/DDQN2/20241127-123456"], # two for no mod
                             # ["DDQN2", DDQN_Agent2, DDQN2_convert_greyscale, "model/dylanqi/DDQN2/20241123-005953"],  # all for no mod             
@@ -98,15 +101,17 @@ if __name__ == "__main__":
 
 
     # env = gym.make('CarRacing-v0').env
-    # env = gym.make('CarRacing-v2', render_mode='rgb_array').env
-    env = gym.make('CarRacing-v2', render_mode='rgb_array',domain_randomize=True).env
+    env = gym.make('CarRacing-v2', render_mode='rgb_array').env
+    # env = gym.make('CarRacing-v2', render_mode='rgb_array',domain_randomize=True).env
+
     for name, agent, grayscale_funct, folder in agents_functs_folders:
         print("\n\n [INFO]: NEW MODEL TYPE!")
         avg_runs = []
         for curr_model in os.listdir( folder ):
             if curr_model.endswith(".weights.h5"):
                 episode = int(curr_model[:-11].split("_")[-1])
-                if episode % 100 == 0:
+                # if episode % 100 == 0:
+                if episode == 1400:
                     print("\n\n [INFO]: NEW EPISODE!")
 
                     # perform agent model testing
